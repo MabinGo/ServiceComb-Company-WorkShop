@@ -59,7 +59,7 @@ public class AuthenticationService {
     });
   }
 
-  @HystrixCommand(fallbackMethod = "timeout")
+//  @HystrixCommand(fallbackMethod = "timeout")
   public ResponseEntity<String> validate(String token) {
     logger.info("Validating token {}", token);
     ResponseEntity<String> responseEntity = restTemplate.postForEntity(

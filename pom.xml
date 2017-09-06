@@ -340,11 +340,11 @@
           <artifactId>foundation-config-cc</artifactId>
           <version>${cse.version}</version>
         </dependency>
-        <dependency>
-          <groupId>com.huawei.paas.cse</groupId>
-          <artifactId>cse-handler-tracing-apm</artifactId>
-          <version>${cse.version}</version>
-        </dependency>
+        <!--<dependency>-->
+          <!--<groupId>com.huawei.paas.cse</groupId>-->
+          <!--<artifactId>cse-handler-tracing-apm</artifactId>-->
+          <!--<version>${cse.version}</version>-->
+        <!--</dependency>-->
         <dependency>
           <groupId>com.huawei.paas.cse</groupId>
           <artifactId>cse-handler-performance-stats</artifactId>

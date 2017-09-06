@@ -66,7 +66,8 @@ class AuthenticationAwareFilter extends ZuulFilter {
   public boolean shouldFilter() {
     String path = pathExtractor.path(RequestContext.getCurrentContext());
     logger.info("Received request with query path: {}", path);
-    return !path.endsWith(LOGIN_PATH);
+//    return !path.endsWith(LOGIN_PATH);
+    return false;
   }
 
   @Override

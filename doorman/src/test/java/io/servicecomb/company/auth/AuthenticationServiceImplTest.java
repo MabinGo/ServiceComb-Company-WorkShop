@@ -27,7 +27,7 @@ import org.junit.Test;
 
 public class AuthenticationServiceImplTest {
 
-  private final String username = uniquify("username");
+  /*private final String username = uniquify("username");
   private final String password = uniquify("password");
   private final User user = new User(username);
 
@@ -77,5 +77,5 @@ public class AuthenticationServiceImplTest {
     } catch (UnauthorizedAccessException e) {
       assertThat(e.getMessage()).isEqualTo("No user matches such a token " + token);
     }
-  }
+  }*/
 }
