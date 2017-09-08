@@ -25,5 +25,5 @@ interface FibonacciService {
    * @param n the index of fibonacci sequence
    * @return the nth term of fibonacci sequence
    */
-  long term(int n);
+  long term(int n) throws InterruptedException;
 }

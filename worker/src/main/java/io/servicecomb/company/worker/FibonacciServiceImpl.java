@@ -24,7 +24,8 @@ class FibonacciServiceImpl implements FibonacciService {
    * {@inheritDoc}
    */
   @Override
-  public long term(int n) {
+  public long term(int n) throws InterruptedException {
+    Thread.sleep(100000);
     if (n < 0) {
       throw new IllegalArgumentException("Fibonacci term must not be negative: " + n);
     }

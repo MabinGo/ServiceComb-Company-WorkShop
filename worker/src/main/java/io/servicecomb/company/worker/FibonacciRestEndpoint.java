@@ -41,7 +41,7 @@ public class FibonacciRestEndpoint implements FibonacciEndpoint {
   @Override
   @RequestMapping(value = "/term", method = RequestMethod.GET)
   @ResponseBody
-  public long term(int n) {
+  public long term(int n) throws InterruptedException {
     return fibonacciService.term(n);
   }
 }

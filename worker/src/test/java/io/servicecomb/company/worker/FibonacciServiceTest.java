@@ -31,7 +31,7 @@ public class FibonacciServiceTest {
   private final FibonacciService calculator = new FibonacciServiceImpl();
 
   @Test
-  public void calculatesFibonacciOfTermN() {
+  public void calculatesFibonacciOfTermN() throws InterruptedException {
     for (int i = 0, length = expected.length; i < length; i++) {
       long fib = calculator.term(i);
 
@@ -47,11 +47,13 @@ public class FibonacciServiceTest {
       expectFailing(IllegalArgumentException.class);
     } catch (IllegalArgumentException e) {
       assertThat(e.getMessage()).isEqualTo("Fibonacci term must not be negative: " + term);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
     }
   }
 
   @Test
-  public void calculatesFibonacciOfTerm90() {
+  public void calculatesFibonacciOfTerm90() throws InterruptedException {
     long fibo = calculator.term(90);
 
     assertThat(fibo).isEqualTo(2880067194370816120L);

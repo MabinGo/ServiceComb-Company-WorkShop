@@ -34,7 +34,7 @@ public class FibonacciRpcEndpoint implements FibonacciEndpoint {
   }
 
   @Override
-  public long term(int n) {
+  public long term(int n) throws InterruptedException {
     return fibonacciService.term(n);
   }
 }

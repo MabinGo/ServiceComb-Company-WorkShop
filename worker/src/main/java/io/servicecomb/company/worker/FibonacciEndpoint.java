@@ -45,5 +45,5 @@ public interface FibonacciEndpoint {
    * @param n the index of fibonacci sequence
    * @return the nth term of fibonacci
    */
-  long term(int n);
+  long term(int n) throws InterruptedException;
 }

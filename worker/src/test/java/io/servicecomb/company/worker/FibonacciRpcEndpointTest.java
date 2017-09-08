@@ -33,7 +33,7 @@ public class FibonacciRpcEndpointTest {
   private final FibonacciRpcEndpoint fibonacciRpcApi = new FibonacciRpcEndpoint(fibonacciService);
 
   @Test
-  public void providesFibonacciTermWithUnderlyingService() {
+  public void providesFibonacciTermWithUnderlyingService() throws InterruptedException {
     when(fibonacciService.term(term)).thenReturn(expected);
 
     long fibo = fibonacciRpcApi.term(term);
